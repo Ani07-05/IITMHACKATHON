@@ -8,7 +8,6 @@ app = Flask(__name__)
 CORS(app, resources={r"/*": {"origins": "http://localhost:3000", "methods": ["GET", "POST", "OPTIONS"]}})
 
 # Configure Gemini API
-genai.configure(api_key="AIzaSyCP0FQqIDaUGGKeNYiK2sDuGeRKg_Zx1GI")
 model = genai.GenerativeModel("gemini-1.5-flash")
 
 @app.route('/generate_questions', methods=['POST'])
